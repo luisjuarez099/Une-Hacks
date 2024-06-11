@@ -62,3 +62,37 @@ Temporary Items
 *.wps
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,text,macos
+
+# Archivos de captura de airodump-ng
+*.cap
+*.ivs
+
+# Archivos de salida de aircrack-ng
+*.log
+*.csv
+*.netxml
+
+# Archivos temporales
+*.tmp
+
+# Archivos de core dumps
+core
+
+# Directorio de configuración personal de aircrack-ng (si existe)
+.aircrack-ng
+
+# Archivos de registro
+*.log
+*.out
+*.err
+
+# Archivos del entorno de desarrollo
+.env
+.vscode/
+.idea/
+*.swp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
