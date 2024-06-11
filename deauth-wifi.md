@@ -50,6 +50,9 @@ aireplay-ng --deauth 0 -c [DEVICES MAC ADDRESS] -a [ROUTERS MAC ADDRESS] wlan0mo
 -   `-a [AP MAC address]`: La dirección MAC del punto de acceso (router).
 -   `[interface]`: La interfaz en modo monitor (por ejemplo, `wlan0mon`).
 
+> [!IMPORTANT]
+> Si no especificas la `-c [target device MAC address]`, se intentará desconectar todos los dispositivos de la red.
+
 ### Restablecer la Interfaz de red
 
 ```bash
