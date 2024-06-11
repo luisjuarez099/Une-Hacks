@@ -38,15 +38,16 @@ Montamos a nuestra interfaz
 #### Explicacion del comando antes de ejecutar
 Componentes del Comando
 
-  *  airodump-ng: Esta es la herramienta principal del conjunto de herramientas aircrack-ng utilizada para capturar paquetes de redes inalámbricas y mostrar información sobre puntos de acceso y clientes conectados.
+  *  `airodump-ng`: Esta es la herramienta principal del conjunto de herramientas aircrack-ng utilizada para capturar paquetes de redes inalámbricas y mostrar información sobre puntos de acceso y clientes conectados.
 
-  *  -c1: Este es el canal en el que airodump-ng va a escuchar. El 1 indica que va a escuchar en el canal 1. Los canales de Wi-Fi varían de 1 a 14 (dependiendo de la región).
+  *  `-c1`: Este es el canal en el que airodump-ng va a escuchar. El 1 indica que va a escuchar en el canal 1. Los canales de Wi-Fi varían de 1 a 14 (dependiendo de la región).
 
-  *  -w auditoria: Este es el prefijo del nombre del archivo donde se guardarán los datos capturados. En este caso, los archivos de salida se llamarán auditoria-01.cap, auditoria-02.cap, etc.
+  *  `-w auditoria`: Este es el prefijo del nombre del archivo donde se guardarán los datos capturados. En este caso, los archivos de salida se llamarán auditoria-01.cap, auditoria-02.cap, etc.
 
-  *  -d 50:4E:DC:38:C2:60: Este es el filtro de dirección MAC. airodump-ng solo capturará paquetes que tengan como destino o procedan de esta dirección MAC específica, que corresponde a un dispositivo o punto de acceso en particular.
+  *  `-d 50:4E:DC:38:C2:60`: Este es el filtro de dirección MAC. airodump-ng solo capturará paquetes que tengan como destino o procedan de esta dirección MAC específica, que corresponde a un dispositivo o punto de acceso en particular.
 
-  *  wlp0s20f3mon: Este es el nombre de la interfaz de red en modo monitor que se utilizará para la captura de paquetes. El modo monitor permite que la tarjeta de red capture todo el tráfico inalámbrico que puede recibir, no solo el tráfico destinado a ella.
+  *  `wlp0s20f3mon`: Este es el nombre de la interfaz de red en modo monitor que se utilizará para la captura de paquetes. El modo monitor permite que la tarjeta de red capture todo el tráfico inalámbrico que puede recibir, no solo el tráfico destinado a ella.
+
 ```bash
 airodump-ng -c1 -w auditoria -d 50:4E:DC:38:C2:60  wlp0s20f3mon
 ```
